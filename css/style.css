@@ -11,8 +11,10 @@
     --deep-blue: #141922; 
     --dark-grey: #282828; 
     --text-white: #ffffff; 
+    --player-grey: #C1C1C1;
     --text-grey: #717171; 
-    --lime-green: #adff2f; 
+    --lime-green: #adff2f;
+    --player-green: #1cdf63;
 }
 
 /* MACRO CONTAINERS */
@@ -30,7 +32,7 @@ body{
 .main-content{
     width: calc(100% - 200px);
     height: 100%;
-    background-color: yellow;
+    background-color: goldenrod;
     position: fixed;
     left: 200px;
 }
@@ -89,6 +91,10 @@ p{
     font-weight: bold;
 }
 
+.smaller{
+    font-size: 10px;
+}
+
 .small{
     font-size: 12px;
 }
@@ -97,8 +103,20 @@ p{
     font-size: 14px;
 }
 
+.medium{
+    font-size: 18px
+}
+
+.medium-large{
+    font-size: 20px;
+}
+
 .large{
     font-size: 25px;
+}
+
+.larger{
+    font-size: 35px;
 }
 
 /* NAVBAR */
@@ -174,24 +192,28 @@ p{
     background-color: var(--text-grey);
     color: var(--nero100);
     position: relative;
+    margin-right: 5px;
 }
 
 .sidebar .playlists .new-playlist .add-new i{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); 
 }
 
-.sidebar .playlists .playlists-list ul li{
-    padding-bottom: 20px;
+.sidebar .playlists .playlists-list ul{
+    height: 220px;
+    flex-direction: column;
+    cursor: default;
 }
 
 .sidebar .profile{
     border: 1px solid red;
     position: fixed;
     bottom: 95px;
-    width: calc(200px - 2.4rem)
+    width: calc(200px - 2.4rem);
+    background-color: lightgreen;
 }
 
 .sidebar .profile .download-icon{
@@ -290,4 +312,112 @@ main .main-content .inner-content .cards .card .cover-artist{
     position: fixed;
     bottom: 0;
     z-index: 2000;
+    flex-direction: row;
+}
+
+.player .now-playing{
+    width: 200px;
+    height: 95px;
+    padding: 0 .5rem;
+    flex-direction: row;
+}
+
+.player .now-playing .playing-cover{
+    height: 40px;
+    width: 40px;
+    background-color: aquamarine;
+}
+
+.player .now-playing .playing-title{
+    margin-left: -20px;
+    line-height: 12px;
+}
+
+.player .now-playing .playing-icons{
+    color: var(--text-grey);
+}
+
+.player .handle-reproduction .reproduction-buttons{
+    flex-direction: row;
+    width: 190px;
+    margin: 0 auto;
+    color: var(--text-white);
+}
+
+.player .handle-reproduction .play-time{
+    padding-top: 10px;
+    flex-direction: row;
+    width: 33.33vw;
+}
+
+.player .handle-reproduction .play-time .track-length{
+    width: 80%;
+    background-color: var(--text-grey);
+    position: relative;
+    height: 8px;
+    border-radius: 5px;
+}
+
+.player .handle-reproduction .play-time .track-length .track-progression{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    background-color: var(--player-grey);
+    left: 0;
+    border-radius: 5px;
+}
+
+.player .handle-reproduction .play-time .track-length .track-progression .progression-pointer{
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background-color: var(--player-grey);
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0%;
+}
+
+.player .handle-reproduction .play-time .track-length:hover .track-progression, .player .handle-tracks .volume-bar:hover .volume-level{
+    background-color: var(--player-green);
+}
+
+.player .handle-reproduction .play-time .track-length:hover .track-progression .progression-pointer, .player .handle-tracks .volume-bar:hover .volume-level .volume-pointer{
+    opacity: 100%;
+}
+
+.player .handle-tracks{
+    width: 200px;
+    flex-direction: row;
+    margin: 0 .5rem;
+    color: var(--text-grey);
+}
+
+.player .handle-tracks .volume-bar{
+    position: relative;
+    width: 55%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: var(--text-grey);
+}
+
+.player .handle-tracks .volume-bar .volume-level{
+    position: relative;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    border-radius: 5px;
+    background-color: var(--player-grey);
+}
+
+.player .handle-tracks .volume-bar .volume-level .volume-pointer{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--player-grey);
+    opacity: 0%;
 }
