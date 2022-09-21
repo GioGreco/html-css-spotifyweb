@@ -1,0 +1,74 @@
+/* UTILITY */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --nero100: #000000; 
+    --black-opacity: #000000; 
+    --deep-blue: #141922; 
+    --dark-grey: #282828; 
+    --text-white: #ffffff; 
+    --text-grey: #717171; 
+    --lime-green: #adff2f; 
+}
+
+/* GENERAL */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 100%;
+    height: 95px;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width: 230px;
+    height: 100%;
+    background-color: green;
+}
+
+/* MAIN */
+main{
+    width: 100%;
+    height: calc(100vh - 95px);
+    display: flex;
+}
+
+.main-content{
+    width: calc(100% - 230px);
+    height: 100%;
+    background-color: yellow;
+}
+
+.inner-content{
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* PLAYER BAR */
+.player{
+    width: 100%;
+    height: 95px;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    z-index: 2000;
+}
