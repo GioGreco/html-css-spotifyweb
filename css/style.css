@@ -85,6 +85,10 @@ li:hover > *{
     align-items: center;
 }
 
+.align-start{
+    align-items: flex-start;
+}
+
 .text-center{
     text-align: center;
 }
@@ -347,20 +351,19 @@ main .main-content .inner-content .navigate-pages ul li a{
 }
 
 main .main-content .inner-content section{
-    margin-bottom: 150px;
+    margin-bottom: 70px;
 }
 
 main .main-content .inner-content .cards{
     width: 100%;
     margin-left: -5px;
     margin-right: -5px;
-    padding-top: 20px;
+    flex-wrap: wrap;
 }
 
 main .main-content .inner-content .cards .card{
-    width: calc((100vw - (200px + 4rem)) / 6);
-    height: calc((100vw - (200px + 4rem)) / 6);
-    padding: 5px 5px;
+    width: calc(100% / 6);
+    padding: 25px 5px ;
 }
 
 main .main-content .inner-content .cards .card .cover-img{
@@ -565,4 +568,25 @@ main .main-content .inner-content .cards .card .cover-artist{
 }
 
 /* RESPONSIVE - RESPONSIVE - RESPONSIVE - RESPONSIVE - RESPONSIVE - RESPONSIVE*/
+
+@media screen and (max-width: 1200px){
+    main .main-content .inner-content .cards .card{
+        width: calc(100% / 4);
+    }
+}
+@media screen and (max-width: 992px){
+    main .main-content .inner-content .cards .card{
+        width: calc(100% / 3);
+    }
+}
+@media screen and (max-width: 768px){
+    main .main-content .inner-content .cards .card{
+        width: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 575px){
+    main .main-content .inner-content .cards .card{
+        width: 100%
+    }
+}
 
