@@ -15,7 +15,6 @@
     <div class="wrapper">
         <main>
             <nav class="sidebar">
-                <div class="sidebar-wrapper">
                     <div class="logo flex align-center start">
                         <a href="#"><img src="./img/logo.svg" alt="Spotify logo"></a>
                     </div>
@@ -26,6 +25,7 @@
                             <li><a href="#"><i class="fa-solid fa-lines-leaning"></i>La tua libreria</a></li>
                         </ul>
                     </div>
+                <div class="sidebar-wrapper">
                     <p class="medium-small heavy">PLAYLIST</p>
                     <div class="playlists">
                         <div class="new-playlist flex align-center">
@@ -33,10 +33,12 @@
                             <span class="medium-small heavy">Crea Playlist</span>
                         </div>
                         <div class="playlists-list">
-                            <ul class="small heavy flex space-between">
-                                <li><span>Nome Playlist</span></li>
-                                <li><span>Nome Playlist</span></li>
-                                <li><span>Nome Playlist</span></li>
+                            <ul class="small heavy">
+                                <div class="sticky">
+                                    <li><span>Nome Playlist</span></li>
+                                    <li><span>Nome Playlist</span></li>
+                                    <li><span>Nome Playlist</span></li>
+                                </div>
                                 <li><span>Nome Playlist</span></li>
                                 <li><span>Nome Playlist</span></li>
                                 <li><span>Nome Playlist</span></li>
@@ -45,9 +47,9 @@
                         </div>
                     </div>
                     <div class="profile">
-                        <span class="small heavy flex">
+                        <span class="install small heavy flex">
                             <div class="download-icon">
-                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Download icon</title><path d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z" fill="#717171" fill-rule="evenodd"/></svg>
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Download icon</title><path d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z" fill-rule="evenodd"/></svg>
                             </div>
                             <div>Installa App</div>
                         </span>
@@ -62,12 +64,12 @@
             </nav>
             <section class="main-content">
                 <nav class="navbar flex align-center">
-                    <div class="upgrade-btn small pretty-heavy">EFFETTUA L'UPGRADE</div>
+                    <div class="upgrade-btn small pretty-heavy wider">EFFETTUA L'UPGRADE</div>
                 </nav>
                 <section class="inner-content">
                     <div class="navigate-pages">
                         <ul class="flex space-between align-center small heavy">
-                            <li><a href="#">IN EVIDENZA</a></li>
+                            <li><a class="active" href="#">IN EVIDENZA</a></li>
                             <li><a href="#">PODCAST</a></li>
                             <li><a href="#">CLASSIFICHE</a></li>
                             <li><a href="#">GENERI E MOOD</a></li>
@@ -80,44 +82,56 @@
                         <div class="cards flex start align-center">
                             <div class="card">
                                 <div class="cover-img">
-                                
+                                    <img src="./img/metal_lifting.jpg" alt="metal lifting">
+                                    <div class="cover-layover"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
                                 </div>
-                                <div class="cover-title heavy text-center">Title</div>
+                                <div class="cover-title heavy text-center">Heavy Metal</div>
+                                <div class="cover-artist small heavy text-center">Subtitle</div>
+                            </div>
+                            <div class="card">
+                                <div class="cover-img">
+                                    <img src="./img/stranger.jpeg" alt="stranger things">
+                                    <div class="cover-layover"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
+                                </div>
+                                <div class="cover-title heavy text-center">Stranger Things Vol. 1</div>
+                                <div class="cover-artist small heavy text-center">Kyle Dixon & Micheal Stein</div>
+                            </div>
+                            <div class="card">
+                                <div class="cover-img">
+                                    <img src="./img/aquietplace.jpeg" alt="a Quiet Place">
+                                    <div class="cover-layover"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
+                                </div>
+                                <div class="cover-title heavy text-center">A quiet place</div>
+                                <div class="cover-artist small heavy text-center">Subtitle</div>
+                            </div>
+                            <div class="card">
+                                <div class="cover-img">
+                                    <img src="./img/split.jpeg" alt="Split">
+                                    <div class="cover-layover"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
+                                </div>
+                                <div class="cover-title heavy text-center">Split</div>
                                 <div class="cover-artist small heavy text-center">Artist</div>
                             </div>
                             <div class="card">
                                 <div class="cover-img">
-                                
+                                    <img src="./img/cure.jpeg" alt="A cure for Wellness">
+                                    <div class="cover-layover"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
                                 </div>
-                                <div class="cover-title heavy text-center">Title</div>
+                                <div class="cover-title heavy text-center">A cure for wellness</div>
                                 <div class="cover-artist small heavy text-center">Artist</div>
                             </div>
                             <div class="card">
                                 <div class="cover-img">
-                                
+                                    <img src="./img/sinister.jpeg" alt="Sinister">
+                                    <div class="cover-layover"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
                                 </div>
-                                <div class="cover-title heavy text-center">Title</div>
-                                <div class="cover-artist small heavy text-center">Artist</div>
-                            </div>
-                            <div class="card">
-                                <div class="cover-img">
-                                
-                                </div>
-                                <div class="cover-title heavy text-center">Title</div>
-                                <div class="cover-artist small heavy text-center">Artist</div>
-                            </div>
-                            <div class="card">
-                                <div class="cover-img">
-                                
-                                </div>
-                                <div class="cover-title heavy text-center">Title</div>
-                                <div class="cover-artist small heavy text-center">Artist</div>
-                            </div>
-                            <div class="card">
-                                <div class="cover-img">
-                                
-                                </div>
-                                <div class="cover-title heavy text-center">Title</div>
+                                <div class="cover-title heavy text-center">Sinister</div>
                                 <div class="cover-artist small heavy text-center">Artist</div>
                             </div>
                         </div>
@@ -128,15 +142,19 @@
                         <div class="cards flex start align-center">
                             <div class="card">
                                 <div class="cover-img">
-                                
+                                    <img src="./img/radar.jpeg" alt="Releas Radar">
+                                    <div class="cover-layover"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
                                 </div>
-                                <div class="cover-title heavy text-center">Title</div>
+                                <div class="cover-title heavy text-center">Release Radar</div>
                             </div>
                             <div class="card">
                                 <div class="cover-img">
-                                
+                                    <img src="./img/mixdaily.jpeg" alt="Daily Mix">
+                                    <div class="cover-layover"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
                                 </div>
-                                <div class="cover-title heavy text-center">Title</div>
+                                <div class="cover-title heavy text-center">Daily Mix 1</div>
                             </div>
                         </div>
                     </section>
@@ -145,16 +163,20 @@
                         <span class="small heavy">Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</span>
                         <div class="cards flex start align-center">
                             <div class="card">
-                                <div class="cover-img circle">
-                                
+                                <div class="cover-img">
+                                    <img class="circle" src="./img/youg.jpeg" alt="Youg">
+                                    <div class="cover-layover circle"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
                                 </div>
-                                <div class="cover-title heavy text-center">Title</div>
+                                <div class="cover-title heavy text-center">Lana Del Rey</div>
                             </div>
                             <div class="card">
-                                <div class="cover-img circle">
-                                
+                                <div class="cover-img">
+                                    <img class="circle" src="./img/einaudi.jpeg" alt="Einaudi">
+                                    <div class="cover-layover circle"></div>
+                                    <i class="fa-regular fa-circle-play larger"></i>
                                 </div>
-                                <div class="cover-title heavy text-center">Title</div>
+                                <div class="cover-title heavy text-center">Ludovico Einaudi</div>
                             </div>
                         </div>
                     </section>
@@ -162,10 +184,9 @@
             </section>
         </main>
         <div class="player flex space-between align-center">
-
             <div class="now-playing flex space-between align-center">
                 <div class="playing-cover">
-            
+                    <img src="./img/sinister.jpeg" alt="Playing track cover">
                 </div>
                 <div class="playing-title">
                     <p class="small heavy">Sinister</p>
@@ -176,13 +197,11 @@
                     <i class="fa-regular fa-heart"></i>
                 </div>
             </div>
-
-
             <div class="handle-reproduction">
                 <div class="reproduction-buttons flex space-between align-center medium-large">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
-                    <i class="fa-regular fa-circle-play larger"></i>
+                    <i class="fa-regular fa-circle-play larger wider"></i>
                     <i class="fa-solid fa-forward-step"></i>
                     <i class="fa-solid fa-rotate-right"></i>
                 </div>
@@ -201,9 +220,7 @@
                 <i class="fa-solid fa-desktop"></i>
                 <i class="fa-solid fa-volume-high"></i>
                 <div class="volume-bar">
-                    <div class="volume-level">
-                        <div class="volume-pointer"></div>
-                    </div>
+                    <input type="range" min="1" max="100" value="30" class="volume-range">
                 </div>
             </div>
         </div>
