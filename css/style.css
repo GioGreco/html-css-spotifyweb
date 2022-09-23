@@ -34,8 +34,8 @@ body{
     width: calc(100% - 200px);
     height: 100%;
     background-color: var(--deep-blue);
-    position: fixed;
-    left: 200px;
+    /* position: fixed;
+    left: 200px; */
 }
 
 /* STANDARD STYLES */
@@ -188,6 +188,7 @@ li:hover > *{
 .sidebar .sidebar-bottom{
     height: 70px;
     width: 100%;
+    padding: 0 1.2rem
 }
 
 .sidebar .logo{
@@ -648,10 +649,51 @@ main .main-content .inner-content .cards .card .cover-artist{
     main .main-content .inner-content .cards .card{
         width: calc(100% / 2);
     }
+    .sidebar{
+        width: 50px;
+    }
+    .main-content{
+        width: calc(100% - 50px);
+    }
+    .navbar{
+        width: calc(100% - 50px);
+    }
+    .sidebar .sidebar-top .logo .wide-logo{
+        display: none;
+    }
+    .sidebar .sidebar-top .logo .small-logo{
+        display: block;
+        margin: 0 10px;
+    }
+    .sidebar .sidebar-top .main-areas span{
+        display: none;
+    }
+    .sidebar .sidebar-top .main-areas ul li a{
+        padding: 5px 10px;
+    }
+    .sidebar .sidebar-top .playlists{
+        display: none;
+    }
+    .sidebar .sidebar-bottom{
+        padding: 0 10px;
+    }
+    .sidebar .sidebar-bottom .profile-pic{
+        margin: 0 auto;
+    }
+    .sidebar .sidebar-bottom .collapse{
+        display: none;
+    }
+    .sidebar .sidebar-bottom .download-icon svg{
+        width: 25px;
+        height: 25px;
+    }
 }
 @media screen and (max-width: 575px){
     main .main-content .inner-content .cards .card{
-        width: 100%
+        width: 100%;
+    }
+    .main-content .upgrade-btn{
+        display: none;
     }
 }
 
