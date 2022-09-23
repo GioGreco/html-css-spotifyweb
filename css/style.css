@@ -69,6 +69,10 @@ li:hover > *{
     display: flex;
 }
 
+.block{
+    display: block;
+}
+
 .wrap{
     flex-wrap: wrap;
 }
@@ -172,13 +176,18 @@ li:hover > *{
 .sidebar{
     width: 200px;
     height: 100%;
-    position: fixed;
-    left: 0;
     background-color: var(--nero100);
+    min-height: 480px;
 }
 
-.sidebar .sidebar-wrapper{
-    padding: 0 1.2rem;
+.sidebar .sidebar-top{
+    height: calc(100% - 70px);
+    flex-direction: column;
+}
+
+.sidebar .sidebar-bottom{
+    height: 70px;
+    width: 100%;
 }
 
 .sidebar .logo{
@@ -186,36 +195,46 @@ li:hover > *{
     height: 95px;
 }
 
+.sidebar .logo .small-logo{
+    display: none;
+    width: 30px;
+}
+
 .sidebar .logo a{
     width: 100%;
 }
 
-.sidebar .main-areas ul li{
-    margin-bottom: 20px;
+.sidebar .sidebar-top .main-areas img{
+    width: 25px;
+    vertical-align: text-bottom;
+    margin-right: 10px;
 }
 
-.sidebar .main-areas ul li{
+.sidebar .sidebar-top .main-areas span:hover{
+    color: var(--text-white);
+}
+
+.sidebar .sidebar-top .main-areas ul li{
+    padding: 2px 0;
+}
+
+.sidebar .sidebar-top .main-areas ul li a{
     border-left: 2px solid var(--nero100);
+    padding: 5px 1.2rem;
+    width: 100%;
 }
 
-.sidebar .main-areas ul li:first-of-type{
+.sidebar .sidebar-top .main-areas ul li a.focus{
     border-left: 2px solid var(--lime-green);
 }
 
-.sidebar .main-areas i{
-    padding-right: 5px;
-    padding-left: 1.2rem;
-    font-size: 20px;
-}
-
-.sidebar .main-areas ul li:last-of-type i{
-    transform: scaleX(-1);
-    padding-right: 1.2rem;
-    padding-left: 5px;
+.sidebar .sidebar-top .playlists{
+    overflow: hidden;
+    padding: 40px 1.2rem;
 }
 
 .sidebar .playlists .new-playlist{
-    padding: 10px 0 20px;
+    padding: 10px 0 0;
     cursor: pointer;
 }
 
@@ -244,31 +263,14 @@ li:hover > *{
     transform: translate(-50%,-50%); 
 }
 
-.sidebar .playlists .playlists-list{
-    min-height: 110px;
+.sidebar .sidebar-top .playlists .playlists-list{
+    height: 90%;
+    overflow-y: auto;
 }
 
-.sidebar .playlists .playlists-list .sticky{
-    position: sticky;
-    bottom: 165px;
-    min-height: 110px;
-}
-
-.sidebar .playlists .playlists-list ul{
+.sidebar .playlists .playlists-list li{
+    margin: 20px 0;
     cursor: default;
-    position: sticky;
-    bottom: 165px;
-}
-
-.sidebar .playlists .playlists-list ul li{
-    margin-bottom: 20px;
-}
-
-.sidebar .profile{
-    position: fixed;
-    bottom: 95px;
-    width: calc(200px - 2.4rem);
-    background-color: var(--nero100);
 }
 
 .sidebar .profile .install{
@@ -459,6 +461,10 @@ main .main-content .inner-content .cards .card .cover-img:hover .cover-layover, 
     opacity: 100%;
 }
 
+main .main-content .inner-content .cards .card .cover-img i:hover{
+    color: var(--player-green);
+}
+
 main .main-content .inner-content .cards .card .cover-title{
     color: var(--text-white);
     padding-top: 12px;
@@ -614,7 +620,7 @@ main .main-content .inner-content .cards .card .cover-artist{
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-color: white;
+    background-color: var(--text-white);
     height: 12px;
     width: 12px;
     border-radius: 50%;
